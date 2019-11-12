@@ -1,0 +1,228 @@
+* {
+            margin: 0px;
+            padding: 0px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-sizing: border-box;
+        }
+
+        .menuMiddle {
+        text-align: center;
+        border-radius: 500px;
+        background-color: #85251D;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        padding-top: 2em;
+        padding-bottom: 2em;
+        box-shadow: -1px 14px 13px -7px rgba(0,0,0,0.64);
+        }
+
+       .menuMiddle .op {
+           text-decoration: none;
+           color: white;
+           padding: 2em;
+       }
+
+       .menuMiddle i {
+           font-size: 25px;
+       }
+
+       #close {
+        position: absolute;
+        top: -0.1em;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        line-height: 1.8em;
+        font-size: 25px;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        border: red 2px solid;
+        background-color: white;
+        color: red;
+        cursor: pointer;
+       }
+
+        .content {
+        padding: 1em 2em;
+        position: absolute;
+        top: 57.2%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+        background-color: #B85316;
+        color:white;
+        text-align: justify;
+        opacity: 0;
+        border-radius: 0 0 50px 50px;
+        box-shadow: -1px -7px 35px -18px rgba(0,0,0,0.64);
+       }
+
+       @keyframes UpMenu {
+            0% {
+                top: 50%;
+            }
+            25% {
+                top: 40%;
+
+            }
+            50% {
+                top: 30%;
+            }
+            75%{
+                top: 20%;
+            }
+            100% {
+                top: 10%;
+
+            }
+       }
+
+       @keyframes DownMenu {
+            0% {
+                top: 10%;
+ 
+            }
+            25% {
+                top: 20%;
+            }
+            50% {
+                top: 30%;
+            }
+            75%{
+                top: 40%;
+            }
+            100% {
+                top: 50%;
+            }
+       }
+
+       @keyframes DownContent {
+           0% {
+            top:36.9%; 
+            height: 20em;
+            opacity: 0.8;
+           }
+           25% {
+            height: 15em;
+            opacity: 0.6;
+           }
+           50% {
+            height: 10em;
+            opacity: 0.4;
+           }
+           75%{
+            height: 5em;
+            opacity: 0.2;
+           }
+           100% {
+            top:50%;
+            opacity: 0;
+           }
+       }
+
+       @keyframes UpContent {
+           0% {
+            top:50%; 
+            height: auto;
+            opacity: 0.2;
+           }
+           25% {
+            height: 5em;
+            opacity: 0.4;
+           }
+           50% {
+            height: 10em;
+            opacity: 0.6;
+           }
+           75%{
+            height: 15em;
+            opacity: 0.8;
+           }
+           100% {
+            height: 20em;
+            top:36.9%;
+            opacity: 1;
+           }
+       }
+
+       .toggleUpMenu {
+           animation: UpMenu 0.5s ease-in-out;
+           animation-fill-mode: forwards;
+       }
+
+       .toggleDownMenu {
+           animation: DownMenu 0.5s ease-in-out;
+          
+       }
+
+       .toggleUpContent {
+           animation: UpContent 0.5s ease-in-out;
+           animation-fill-mode: forwards;
+       }
+
+       .toggleDownContent {
+           animation: DownContent 0.5s ease-in-out;
+       }
+
+
+       @media only screen and (max-width: 768px) {
+        .content {
+            width: 83.33%;
+        } 
+    }
+    
+    @media only screen and (max-width: 768px) {
+        @keyframes DownContent {
+            0% {
+             top:32.8%; 
+             height: 20em;
+             opacity: 0.8;
+            }
+            25% {
+             height: 15em;
+             opacity: 0.6;
+            }
+            50% {
+             height: 10em;
+             opacity: 0.4;
+            }
+            75%{
+             height: 5em;
+             opacity: 0.2;
+            }
+            100% {
+             top:50%;
+             opacity: 0;
+            }
+        }
+    
+        @keyframes UpContent {
+            0% {
+             top:50%; 
+             height: auto;
+             opacity: 0.2;
+            }
+            25% {
+             height: 5em;
+             opacity: 0.4;
+            }
+            50% {
+             height: 10em;
+             opacity: 0.6;
+            }
+            75%{
+             height: 15em;
+             opacity: 0.8;
+            }
+            100% {
+             height: 20em;
+             top:32.8%;
+             opacity: 1;
+            }
+        }
+    }
